@@ -5,7 +5,6 @@ rm(list=ls())
 library("rstudioapi") 
 library("dplyr") # Manipulating variables
 
-
 # Set working directory
 setwd(dirname(getActiveDocumentContext()$path)) 
 getwd()  

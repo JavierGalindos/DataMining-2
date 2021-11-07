@@ -25,8 +25,8 @@ JG_fisherScore <- function(feature, labels){
   p_j <- table(labels) / length(labels)
   
   # Compute Fisher score
-  numerator <- p_j * ((mu_j$x - mu)^2)
-  denominator <- p_j * sigma_j$x^2
+  numerator <- p_j %*% ((mu_j$x - mu)^2)
+  denominator <- p_j %*% sigma_j$x^2
   
   FisherScore <- sum(numerator) / sum(denominator)
   return (FisherScore)

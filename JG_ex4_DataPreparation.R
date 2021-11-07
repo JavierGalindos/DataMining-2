@@ -46,7 +46,7 @@ cor(dataset)
 # PCA
 PCA <- JG_pca(dataset)
 varianceScaled <- PCA$varianceExplained / sum(PCA$varianceExplained)
-k <- length(varianceScaled[cumsum(varianceScaled)<= 0.95])
+k <- length(varianceScaled[cumsum(varianceScaled) <= 0.95])
 barplot(varianceScaled, main = 'Variance explained', xlab = 'Features', ylab = 'Variance explained', col = 'indianred')
 
 # Project data
